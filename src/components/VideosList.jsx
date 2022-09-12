@@ -42,7 +42,7 @@ export default function VideosList() {
                                 inputProps={{ 'aria-labelledby': i }}
                             />
                         </ListItemIcon>
-                        <ListItemText id={i} primary={`Leccion ${i + 1}`} />
+                        <ListItemText id={i} primary={`Lección ${i + 1}`} />
                     </ListItemButton>
                 </ListItem>
             );

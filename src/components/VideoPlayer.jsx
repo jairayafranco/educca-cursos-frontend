@@ -24,15 +24,15 @@ export default function VideoPlayer() {
 export function ButtonVideoLessons() {
     return (
         <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 5 }}>
-            <Button variant='contained'>anterior video</Button>
-            <Button variant='contained'>siguiente video</Button>
+            <Button variant='contained'>anterior lección</Button>
+            <Button variant='contained'>siguiente lección</Button>
         </div>
     );
 }
 
 export function VideoDescription() {
     return (
-        <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', marginTop: 2 }}>
+        <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', marginTop: 1 }}>
             <Typography variant='h6' gutterBottom>
                 Descripción del video
             </Typography>

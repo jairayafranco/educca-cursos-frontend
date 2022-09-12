@@ -21,7 +21,6 @@ import { mainListItems, secondaryListItems } from './listItems';
 import VideoPlayer, { ButtonVideoLessons, VideoDescription } from './VideoPlayer';
 import VideosList from './VideosList';
 import Comments from './Comments';
-import AddComment from './AddComment';
 
 function Copyright(props) {
     return (
@@ -75,7 +74,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
                 }),
                 width: theme.spacing(7),
                 [theme.breakpoints.up('sm')]: {
-                    width: theme.spacing(9),
+                    width: theme.spacing(0),
                 },
             }),
         },
@@ -202,23 +201,13 @@ function DashboardContent() {
                                         // p: 2,
                                         display: 'flex',
                                         flexDirection: 'column',
-                                        height: handleVideoPlayerHeight,
+                                        height: handleVideoPlayerHeight
                                     }}
                                 >
                                     <VideoPlayer />
                                 </Paper>
                                 <ButtonVideoLessons />
                                 <VideoDescription />
-                                <Paper
-                                    sx={{
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        mt: 2,
-                                        p: 2,
-                                    }}
-                                >
-                                    <AddComment />
-                                </Paper>
                             </Grid>
                             {/* Recent VideosList */}
                             <Grid item xs={12} md={4} lg={3}>
@@ -227,8 +216,10 @@ function DashboardContent() {
                                         p: 1,
                                         display: 'flex',
                                         flexDirection: 'column',
-                                        position: innerWidth >= 900 ? 'fixed' : 'relative',
+                                        // position: innerWidth >= 900 ? 'fixed' : 'relative',
                                         height: handleListVideosHeight,
+                                        position: 'fixed',
+                                        width: '24%',
                                     }}
                                 >
                                     <VideosList />
@@ -245,7 +236,7 @@ function DashboardContent() {
                     </Container>
                 </Box>
             </Box>
-        </ThemeProvider>
+        </ThemeProvider >
     );
 }
 
